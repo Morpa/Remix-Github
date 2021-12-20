@@ -1,13 +1,11 @@
-import { LoaderFunction, useLoaderData } from 'remix'
-import { getCommits } from '~/features/github/api'
+import { LoaderFunction } from 'remix'
+import { GithubApi } from '~/features/github'
 
 export const loader: LoaderFunction = async ({ params }) => {
-  return await getCommits(params.repoName)
+  return await GithubApi.getCommits(params.reponame, params.username)
 }
 
 export default function () {
-  const { repoName } = useLoaderData()
-
   return (
     <div className="pl-6 lg:w-80">
       <div className="pt-6 pb-2">
