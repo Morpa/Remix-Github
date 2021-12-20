@@ -5,14 +5,17 @@ import { Types } from '.'
 const config = {
   headers: {
     accept: 'application/vnd.github.v3+json',
-    Authorization: 'token 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'
+    Authorization: 'token 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'
   }
 }
 
-export const getGithubUser = async (username?: string) => {
+export const getUser = async (username?: string) => {
   invariant(username, 'Please provide an username as a string')
 
-  const res = await fetch(`https://api.github.com/users/${username}`, config)
+  const res = await fetch(
+    `https://api.github.com/users/${username.toLocaleLowerCase()}`,
+    config
+  )
 
   return pick(await res.json(), ['login', 'avatar_url', 'html_url', 'bio'])
 }
@@ -37,7 +40,10 @@ export const getUserRepos = async (username?: string) => {
   )
 }
 
-export const getCommits = async (reponame?: string, username?: string) => {
+export const getCommits = async (
+  reponame?: string,
+  username?: string
+): Promise<Types.Commits.Commit[]> => {
   invariant(reponame, 'Please provide an repository name as a string')
   invariant(username, 'Please provide an user name as a string')
 
@@ -46,5 +52,9 @@ export const getCommits = async (reponame?: string, username?: string) => {
     config
   )
 
-  return await res.json()
+  return (await res.json()).map((commit: Types.Commits.ApiResponse) => ({
+    sha: commit.sha,
+    message: commit.commit.message,
+    html_url: commit.html_url
+  }))
 }
