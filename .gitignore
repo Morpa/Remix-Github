@@ -1,0 +1,10 @@
+.env
+secrets.ts
+node_modules
+.DS_Store
+
+/.cache
+/build
+/public/build
+
+/app/tailwind.css
