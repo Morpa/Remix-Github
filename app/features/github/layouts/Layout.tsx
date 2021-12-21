@@ -5,8 +5,8 @@ import { BadgeCheckIcon, CollectionIcon } from '@heroicons/react/solid'
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
 
 import { classNames } from '~/util'
-import { Types } from '..'
 import { navigation, userNavigation } from '../Github.util'
+import { Types } from '..'
 import SelectUser from '../components/SelectUser'
 
 export type RepositoriesProps = {

@@ -1,4 +1,4 @@
-import { Types } from '..'
+import { Types } from '../..'
 
 export type CommitsProps = {
   commits: Types.Commits.Commit[]

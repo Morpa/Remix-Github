@@ -1,7 +1,6 @@
 import { Link } from 'remix'
 import { ChevronRightIcon, StarIcon } from '@heroicons/react/solid'
-
-import { Types } from '..'
+import { Types } from '../..'
 
 export type RepositoryProps = {
   repo: Types.Repositories.Repo
