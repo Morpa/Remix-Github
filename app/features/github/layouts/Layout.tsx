@@ -4,7 +4,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BadgeCheckIcon, CollectionIcon } from '@heroicons/react/solid'
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
 
-import { classNames } from '~/util'
+import { classNames } from '~/utils/util'
 import { navigation, userNavigation } from '../Github.util'
 import { Types } from '..'
 import { SelectUser } from '../components'

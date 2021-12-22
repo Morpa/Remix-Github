@@ -1,7 +1,7 @@
 import { Menu } from '@headlessui/react'
 import { ChevronDownIcon, SortAscendingIcon } from '@heroicons/react/solid'
 
-import { classNames } from '~/util'
+import { classNames } from '~/utils/util'
 import { Types } from '../..'
 import { Layout } from '../../layouts/Layout'
 import { Repository } from '../Repository'
