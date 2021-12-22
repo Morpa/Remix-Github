@@ -1,5 +1,5 @@
 import { LoaderFunction, redirect } from 'remix'
-import { users } from '~/features/Github/components'
+import { users } from '~/features/Github/components/SelectUser'
 
 export const loader: LoaderFunction = () =>
   redirect(`/github/${users[0].username}`)

@@ -2,9 +2,9 @@ import { Menu } from '@headlessui/react'
 import { ChevronDownIcon, SortAscendingIcon } from '@heroicons/react/solid'
 
 import { classNames } from '~/util'
-import { Repository } from '..'
 import { Types } from '../..'
 import { Layout } from '../../layouts/Layout'
+import { Repository } from '../Repository'
 
 export type RepositoriesProps = {
   repos: Types.Repositories.Repo[]

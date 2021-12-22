@@ -7,7 +7,7 @@ import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
 import { classNames } from '~/util'
 import { navigation, userNavigation } from '../Github.util'
 import { Types } from '..'
-import SelectUser from '../components/SelectUser'
+import { SelectUser } from '../components'
 
 export type RepositoriesProps = {
   user: Types.User
