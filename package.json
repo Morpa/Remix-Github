@@ -32,6 +32,11 @@
     "remix": "^1.0.6",
     "tiny-invariant": "^1.2.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "./app/**/*": [
       "yarn lint --fix",
