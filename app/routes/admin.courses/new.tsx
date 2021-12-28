@@ -1,16 +1,16 @@
 import { ActionFunction, redirect, useActionData } from 'remix'
 import { ZodError } from 'zod'
-import { AdminApi } from '~/features/admin'
-import { extractValidationErrors } from '~/utils/util'
+import { extractValidationErrors, Validator } from '~/utils/util'
 import { CourseForm } from '~/features/Admin/components/CourseForm'
+import { AdminApi } from '~/features/Admin'
 
-type FormFields = {
-  name?: string
-  description?: string
+export interface FormFields {
+  name: string
+  description: string
 }
 
-export type ActionData = {
-  formErrors?: FormFields
+export interface ActionData {
+  formErrors?: Partial<FormFields>
   formValues?: FormFields
 }
 
@@ -20,7 +20,7 @@ export const action: ActionFunction = async ({
   const data = Object.fromEntries(await request.formData())
 
   try {
-    await AdminApi.createCourse(data)
+    await AdminApi.saveCourse(Validator.parse(data))
 
     return redirect('.')
   } catch (error) {
@@ -33,6 +33,7 @@ export const action: ActionFunction = async ({
         }
       }
     }
+
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     throw new Error(error.message)
