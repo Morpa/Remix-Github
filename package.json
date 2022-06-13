@@ -19,7 +19,7 @@
     "db:seed": "node ./prisma/seed.js"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.3",
+    "@headlessui/react": "^1.6.4",
     "@heroicons/react": "^1.0.6",
     "@prisma/client": "^3.8.1",
     "@remix-run/react": "^1.5.1",
@@ -49,7 +49,7 @@
     "@storybook/addon-essentials": "^6.4.20",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/react": "^6.4.19",
-    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.4",
     "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/user-event": "^14.0.4",
