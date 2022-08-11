@@ -45,7 +45,7 @@
     ]
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.5.1",
+    "@remix-run/dev": "^1.6.7",
     "@storybook/addon-essentials": "^6.5.10",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/react": "^6.4.19",
