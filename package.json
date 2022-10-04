@@ -30,7 +30,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "remix": "^1.6.8",
-    "tiny-invariant": "^1.2.0",
+    "tiny-invariant": "^1.3.1",
     "zod": "^3.14.3"
   },
   "husky": {
@@ -70,7 +70,7 @@
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "lint-staged": "^13.0.2",
-    "postcss": "^8.4.6",
+    "postcss": "^8.4.17",
     "prettier": "^2.6.1",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.7.4"
